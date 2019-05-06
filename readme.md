@@ -9,7 +9,9 @@ npm install --save @lookrain/thanos
 ```
 import snap from '@lookrain/thanos';
 
-snap();
+onButtonClickOrSomeOtherEventsYouHave() => {
+  snap();
+}
 ```
 
 ### in React
@@ -18,12 +20,13 @@ import snap from '@lookrain/thanos';
 ...
 
 class App extends React.Component {
-  componentDidMount() {
-    snap();
-  }
-
   render() {
-    return ...
+    return (
+      <div>
+        <button onClick={snap}>Snap</button>
+        ...
+      </div>
+    );
   }
 }
 
